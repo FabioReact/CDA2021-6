@@ -1,0 +1,15 @@
+https://nodejs.org/en/ (Version 14.17 ou Version 16.2 - Pas d'importance pour nous)
+
+https://code.visualstudio.com/ (IDE)
+
+Ajouter VSCode à vos variable d'environnement PATH
+
+
+Brendan Eich
+
+ECMAScript 2015 ou ES2015 ou ES6
+ES2020
+
+Chrome: V8
+Edge: Chakra
+Firefox: SpiderMonkey
