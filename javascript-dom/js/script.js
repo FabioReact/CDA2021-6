@@ -111,3 +111,18 @@ function colorGreen() {
 buttonPink.onclick = () => {
 	buttonPink.style.backgroundColor = 'pink';
 }
+
+// ******************** Récupérer la valeur d'un input ********************
+
+// Sélection de mon input
+const input = document.getElementById('prenom');
+
+input.addEventListener('keyup', () => {
+	console.log(input.value);
+	// document.getElementById
+	// je souhaite insérer le contenu de la valeur notre input dans la span ayant l'id input-value
+	const spanInputValue = document.getElementById('input-value');
+	spanInputValue.textContent = input.value;
+});
+
+
