@@ -9,7 +9,6 @@ console.log("Message venant du fichier script.js");
 // getElementById me renvoie une la balise ayant pour id l'argument donné ou null si cet id n'est pas présent sur la page
 const firstLi = document.getElementById("first-li");
 // const firstLi = document.querySelector("#first-li");
-console.log(firstLi);
 
 // *** Sélection par className ***
 // getElementsByClassName me renvoie une HTMLCollection (qui correspond à la classe passée en argument) contant entre 0 et n éléments
@@ -56,3 +55,41 @@ thirdLi.textContent = thirdLi.textContent + " <em>(modifié via textContent)</em
 
 fourthLi.outerText = fourthLi.outerText + " <em>(modifié via outerText)</em>";
 
+// ******************** Changer le style (CSS) ********************
+// Je peux attribuer du style CSS via le JS via la propriété style d'un élément
+
+// *** Via style ***
+firstLi.style.color = "blue";
+firstLi.style.listStyleType = "circle";
+
+// *** Via classList ***
+// Documentation: https://developer.mozilla.org/en-US/docs/Web/API/Element/classList
+// Pour ajouter une classe à la liste
+secondLi.classList.add('green');
+// Pour récupérer la liste des classes: element.classList
+// Si je souhaite supprimer une class: element.classList.remove('nomDeLaClasse')
+// Si je souhaite ajouter une class si elle est absente, et la supprimer si elle est présente, je peux utiliser: element.classList.toggle('nomDeLaClasse')
+
+// *** Via className ***
+// Je peux accéder à la liste de mes classes via la propriété element.className (le résultat ça sera une chaîne de caractères)
+secondLi.className += " capitalize";
+// console.log(secondLi.className, secondLi.classList);
+
+// *** Via id ***
+// Ajout de l'id test à notre troisième li
+thirdLi.id = "test";
+
+// ******************** Écoute d'un évènement JS ********************
+const button = document.getElementById('btn-dark');
+
+// Associer un écouteur d'évènement sur le bouton:
+// Documentation: https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener
+/*
+	addEventListener prend deux paramètres:
+		- le premier est l'évènement à "écouter"
+		- le deuxième est le fonction qui sera éxécutée lorsque l'évènement sera déclenché
+*/
+button.addEventListener('click', function () {
+	console.log("Dark mode boutton cliqué");
+	document.querySelector("body").classList.toggle("dark");
+});
