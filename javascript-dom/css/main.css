@@ -13,3 +13,20 @@ h1 {
 #test {
 	text-decoration: underline;
 }
+
+body {
+	--theme-color: black;
+	--theme-bg-color: white;
+	color: var(--theme-color);
+	background-color: var(--theme-bg-color);
+}
+
+button {
+	color: var(--theme-color);
+	background-color: var(--theme-bg-color);
+}
+
+body.dark-mode {
+	--theme-color: #fff;
+	--theme-bg-color: hsl(249, 20%, 14%);
+}

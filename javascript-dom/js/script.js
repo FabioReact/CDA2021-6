@@ -80,16 +80,34 @@ secondLi.className += " capitalize";
 thirdLi.id = "test";
 
 // ******************** Écoute d'un évènement JS ********************
-const button = document.getElementById('btn-dark');
+const buttonDark = document.getElementById('btn-dark');
+const buttonGreen = document.getElementById('btn-green');
+const buttonPink = document.getElementById('btn-pink');
 
 // Associer un écouteur d'évènement sur le bouton:
 // Documentation: https://developer.mozilla.org/fr/docs/Web/API/EventTarget/addEventListener
 /*
-	addEventListener prend deux paramètres:
-		- le premier est l'évènement à "écouter"
-		- le deuxième est le fonction qui sera éxécutée lorsque l'évènement sera déclenché
+addEventListener prend deux paramètres:
+- le premier est l'évènement à "écouter"
+- le deuxième est le fonction qui sera éxécutée lorsque l'évènement sera déclenché
 */
-button.addEventListener('click', function () {
+const body = document.getElementsByTagName('body')[0];
+
+buttonDark.addEventListener('click', () => {
+	// On sélectionne le body pour lui ajouter une classe CSS
+	// Cette classe mettre la bg en noir et le texte en blanc
+	body.classList.toggle('dark-mode');
 	console.log("Dark mode boutton cliqué");
-	document.querySelector("body").classList.toggle("dark");
 });
+
+function colorGreen() {
+	buttonGreen.style.backgroundColor = '#5ab552';
+}
+
+// const colorGreen = () => {
+// 	buttonGreen.style.backgroundColor = '#5ab552';
+// }
+
+buttonPink.onclick = () => {
+	buttonPink.style.backgroundColor = 'pink';
+}
