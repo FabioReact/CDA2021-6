@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="script.js" defer></script>
+	<title>Création d'élements en JS</title>
+	<style>
+		article {
+			border-radius: 12px;
+			width: 300px;
+			box-shadow: 1px 1px 6px hsl(0, 0%, 0%, .2);
+			overflow: hidden;
+		}
+		article img {
+			width: 100%;
+			height: 200px;
+		}
+		article span {
+			font-size: 1.5rem;
+			font-family: 'Segoe UI', sans-serif;
+			text-transform: uppercase;
+			text-align: center;
+			letter-spacing: 4px;
+			display: block;
+		}
+		article p {
+			margin: 0;
+			margin-bottom: 12px;
+			padding: 12px;
+			font-size: .925rem;
+			color: rgb(66, 66, 66);
+		}
+	</style>
+</head>
+<body>
+	<h1>Création d'élements en JS</h1>
+	<section id="first">
+		<button>Ajouter nouveau paragraphe</button>
+	</section>
+	<section id="second">
+		<label for="product-name">Nom du produit:</label>
+		<input type="text" id="product-name">
+		<label for="product-url">URL de l'image:</label>
+		<input type="text" id="product-url">
+		<label for="product-description">Description du produit:</label>
+		<input type="text" id="product-description">
+		<button>Ajouter Article</button>
+		<article>
+			<div>
+				<img src="https://www.techadvisor.com/cmsdata/slideshow/3677861/best_smartphone_jan_2021_hero_thumb1200_4-3.jpg" alt="phone">
+			</div>
+			<span>Télephone</span>
+			<p>Description: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, quisquam.</p>
+		</article>
+	</section>
+</body>
+</html>
