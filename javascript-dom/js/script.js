@@ -125,4 +125,28 @@ input.addEventListener('keyup', () => {
 	spanInputValue.textContent = input.value;
 });
 
+// *** Exercice compteur ***
+const spanCounter = document.querySelector("#counter-section span");
 
+
+const updateCounter = (nb) => {
+	// Pour convertir une chaine de caractère en nombre, je peux faire
+	// - parseInt("5") ou +"5"
+	spanCounter.innerText = +spanCounter.innerText + nb;
+}
+
+let counter = 0;
+const incrementBtn = document.querySelector("[data-function='increment']");
+const decrementtBtn = document.querySelector("[data-function='decrement']");
+
+incrementBtn.addEventListener('click', () => {
+	counter++;
+	// Vous pouvez récupérer les data-attribut avec element.dataset
+	// console.log(incrementBtn.dataset);
+	spanCounter.innerText = counter;
+})
+
+decrementtBtn.addEventListener('click', () => {
+	counter--;
+	spanCounter.innerText = counter;
+})
