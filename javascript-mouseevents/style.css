@@ -1,0 +1,29 @@
+#test {
+	margin: 0 auto;
+	background-color: #039be5;
+	height: 200px;
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#test > div {
+	background-color: white;
+	height: 50px;
+	width: 50px;
+}
+
+section {
+	display: flex;
+	justify-content: space-between;
+}
+
+section > p {
+	border: 3px solid #039be5;
+	padding: 8px;
+}
+
+.border-red {
+	border-color: #d32f2f;
+}

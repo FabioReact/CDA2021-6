@@ -1,5 +1,13 @@
 pwd: Print Working Directory - Affiche le chemin du répertoire courant
+
 ls: List - Affiche les fichiers présent dans le répertoire courant
+
 cd: change directory - Permet de naviguer des les dossiers:
 	- cd .. -> permet de remontrer d'un dossier (revenir dans le dossier parent)
 	- cd projet/ -> permet d'aller dans le répertoire "projet"
+
+mkdir: make directory - créer un dossier
+	- mkdir nom-du-dossier
+
+touch: créer un fichiers
+	- touch exemple.txt
